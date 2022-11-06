@@ -3,6 +3,9 @@
 <% @lists.each do |list| %>
 
   <p>タイトル</p>
-  <span><%= list.title %></span>
+  <span>
+    <%= link_to list.title, list_path(list.id) %>
+  </span>
+  <!--as:オプションを追加「"/lists/#{list.id}"」を「list_path(list.id)」に書き換え-->
 
 <% end %>
