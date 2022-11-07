@@ -7,5 +7,14 @@
     <%= link_to list.title, list_path(list.id) %>
   </span>
   <!--as:オプションを追加「"/lists/#{list.id}"」を「list_path(list.id)」に書き換え-->
+  
+  <p>画像</p>
+  <% if list.image.attached? %>
+    <%= image_tag list.image,size: "200x200" %>
+  <% else %>
+    <%= image_tag 'no_image', size: "200x200" %>
+  <% end %>
+  
+
 
 <% end %>
